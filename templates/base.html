@@ -23,6 +23,9 @@
       <li><a href="/resume" class="{{'active' if active=='resume' else ''}}">Resume</a></li>
       <li><a href="/projects" class="{{'active' if active=='projects' else ''}}">Projects</a></li>
       <li><a href="/contact" class="{{'active' if active=='contact' else ''}}">Contact</a></li>
+      <li class="-icon">
+        <a href="javascript:void(0);" onclick="toggleHamburger()">☰</a>
+      </li>
       <!-- links -->
       <li style="float:right;">
          <a href="https://github.com/padoyle"><img src="../static/icons/github.png"/></a>
@@ -31,6 +34,17 @@
          <a href="https://www.linkedin.com/in/pauldoyle22/"><img src="../static/icons/linkedin.png"/></a>
       </li>
    </ul>
+   <script>
+   /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the -icon */
+   function toggleHamburger() {
+       var x = document.getElementById("ppwTopNav");
+       if (x.className === "topnav") {
+           x.className += " responsive";
+       } else {
+           x.className = "topnav";
+       }
+   }
+   </script>
    {% block content %}
    {% endblock %}
 </body>
