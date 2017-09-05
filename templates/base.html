@@ -4,16 +4,32 @@
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1, user-scalabble=no">
    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
    <link rel="stylesheet" href="../static/css/beauter.min.css">
 </head>
 <body>
+   <style>
+      .material-icons {
+         vertical-align: middle;
+         margin-bottom: 0.25em;
+      }
+      .topnav li a {
+         height: 58px;
+      }
+   </style>
    <ul class="topnav" id="ppwTopNav">
-      <li><a href="/" class="brand">Paul Doyle</a></li>
-      <li><a href="/about" class="">About</a></li>
-      <li><a href="/resume" class="">Resume</a></li>
-      <li><a href="/resume" class="">Projects</a></li>
-      <li><a href="/about" class="">Contact</a></li>
-      <li style="float:right;"><a href="/resume" class="">gh</a></li>
+      <li><a href="/" class="brand"><i class="material-icons">&#xE88A;</i> Paul Doyle</a></li>
+      <li><a href="/about" class="{{'active' if active=='about' else ''}}">About</a></li>
+      <li><a href="/resume" class="{{'active' if active=='resume' else ''}}">Resume</a></li>
+      <li><a href="/projects" class="{{'active' if active=='projects' else ''}}">Projects</a></li>
+      <li><a href="/contact" class="{{'active' if active=='contact' else ''}}">Contact</a></li>
+      <!-- links -->
+      <li style="float:right;">
+         <a href="https://github.com/padoyle"><img src="../static/icons/github.png"/></a>
+      </li>
+      <li style="float:right;">
+         <a href="https://www.linkedin.com/in/pauldoyle22/"><img src="../static/icons/linkedin.png"/></a>
+      </li>
    </ul>
    {% block content %}
    {% endblock %}
