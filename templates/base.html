@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <link rel="stylesheet" type="text/css" href="../static/css/milligram.min.css" />
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1, user-scalabble=no">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+   <link rel="stylesheet" href="../static/css/beauter.min.css">
 </head>
 <body>
-   <div>
-      <a href="/">Home</a>
-      <a href="/resume">Resume</a>
-   </div>
+   <ul class="topnav" id="ppwTopNav">
+      <li><a href="/" class="brand">Paul Doyle</a></li>
+      <li><a href="/about" class="">About</a></li>
+      <li><a href="/resume" class="">Resume</a></li>
+      <li><a href="/resume" class="">Projects</a></li>
+      <li><a href="/about" class="">Contact</a></li>
+      <li style="float:right;"><a href="/resume" class="">gh</a></li>
+   </ul>
    {% block content %}
    {% endblock %}
 </body>

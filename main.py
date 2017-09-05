@@ -10,3 +10,7 @@ def main_page():
 @app.route('/resume')
 def resume_page():
     return render_template('resume.html')
+
+@app.rout('/about')
+def about_page():
+    return render_template('about.html')
