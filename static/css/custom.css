@@ -78,8 +78,11 @@ h3.rs-header:after {
 
 .rs-sub .col {
    padding: 0px;
-   padding-bottom: 10px;
+}
+
+.resume-block .rs-sub .col {
    font-size: 1.15em;
+   padding-bottom: 10px;
 }
 
 ul.rs-list li {
@@ -87,10 +90,10 @@ ul.rs-list li {
 }
 
 .resume-bg {
-   background-color: #EEF;
+   background-color: #DEE0C9;
 }
 
-/*Custom classes*/
+
 .footer {
    position: absolute;
    bottom: 0;
@@ -99,4 +102,11 @@ ul.rs-list li {
    width: 100%;
    height: 100px;
    padding: 1rem;
+}
+
+/* Print friendliness */
+@media print {
+   .col.m4 {width:33%; float:left;}
+   .col.m6 {width:50%; float:left;}
+   .col.m8 {width:66%; float:left;}
 }
