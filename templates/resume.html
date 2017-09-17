@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
-   <div class="resume-block">
+   <div class="resume-bg">
       <div class="resume-header page-content">
          <h1 class="resume-title">Paul Doyle</h1>
          <div class="row resume-subtitle">Software Developer</div>
       </div>
 
       <div class="row">
-         <div class="col m8">
+         <div class="col m8 resume-block">
             <h3 class="rs-header">Work Experience</h3>
             <h5 class="rs-title">GREE International, Inc.</h5>
             <div class="row rs-sub">
@@ -78,8 +78,8 @@
                <div class="col m6">March – June 2013</div>
             </div>
             <ul class="rs-list">
-               <li>Built a ray tracer in C++ using GPU parallelism using NVidia CUDA programming platform</li>
-               <li>Implemented shadows, reflections, refraction, anti-aliasing, and Monte Carlo path tracing</li>
+               <li>Built a ray tracer in C++ using GPU parallelism using NVidia CUDA</li>
+               <li>Implemented shadows, reflections, refraction, and Monte Carlo path tracing</li>
             </ul>
          </div>
          <div class="col m4 rs-sidebar">
@@ -90,59 +90,33 @@
             <h5 class="rs-title">Cal Poly, San Luis Obispo</h5>
             <p>Computer Science Major, Music Minor</p>
             <h3 class="rs-header">Languages</h3>
-            <table style="width:100%">
-                  <tr>
-                     <th style="text-align:left;">Language</th>
-                     <th style="text-align:left;">Proficiency</th>
-                  </tr>
-                  <tr>
-                     <td>Java</td>
-                     <td>X X X X _</td>
-                  </tr>
-                  <tr>
-                     <td>Bash</td>
-                     <td>X X X _ _</td>
-                  </tr>
-                  <tr>
-                     <td>Ruby</td>
-                     <td>X _ _ _ _</td>
-                  </tr>
-                  <tr>
-                     <td>ActionScript 3</td>
-                     <td>X X _ _ _</td>
-                  </tr>
-                  <tr>
-                     <td>JavaScript</td>
-                     <td>X X _ _ _</td>
-                  </tr>
-                  <tr>
-                     <td>C</td>
-                     <td>X X _ _ _</td>
-                  </tr>
-                  <tr>
-                     <td>C++</td>
-                     <td>X X _ _ _</td>
-                  </tr>
-                  <tr>
-                     <td>Kotlin</td>
-                     <td>X X _ _ _</td>
-                  </tr>
-                  <tr>
-                     <td>Python</td>
-                     <td>X _ _ _ _</td>
-                  </tr>
-                  <tr>
-                     <td>Haskell</td>
-                     <td>X _ _ _ _</td>
-                  </tr>
-               </table>
+            <h5 class="rs-title">Professional</h5>
+            <div class="row rs-sub">
+               <div class="col m6">Java</div>
+               <div class="col m6">X X X X _</div>
+            </div>
+            <div class="row rs-sub">
+               <div class="col m6">Bash</div>
+               <div class="col m6">X X _ _ _</div>
+            </div>
+            <div class="row rs-sub">
+               <div class="col m6">Ruby</div>
+               <div class="col m6">X _ _ _ _</div>
+            </div>
+            <h5 class="rs-title">School</h5>
+            <div class="row rs-sub">
+               <div class="col m6">Kotlin</div>
+               <div class="col m6">X X _ _ _</div>
+            </div>
+            <div class="row rs-sub">
+               <div class="col m6">Python</div>
+               <div class="col m6">X _ _ _ _</div>
+            </div>
+            <div class="row rs-sub">
+               <div class="col m6">Haskell</div>
+               <div class="col m6">X _ _ _ _</div>
+            </div>
          </div>
       </div>
-
-      <h4>Hobbies and Interests</h4>
-      <ul class="rs-list">
-         <li>Video games journalism and game design, computer graphics, mobile development</li>
-         <li>Japanese animation and video games (currently learning Japanese)</li>
-      </ul>
    </div>
 {% endblock %}
