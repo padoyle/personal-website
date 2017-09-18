@@ -66,7 +66,7 @@ hr {
    text-align: center;
 }
 
-h3.rs-header:after {
+h4.rs-header:after, h3.rs-header:after {
    content: ' ';
    display: block;
    border: 1px solid rgba(14, 12, 04, .4);
@@ -93,6 +93,9 @@ ul.rs-list li {
    background-color: #DEE0C9;
 }
 
+.rs-sidebar {
+   padding-top: 20px;
+}
 
 .footer {
    position: absolute;
