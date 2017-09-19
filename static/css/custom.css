@@ -40,6 +40,10 @@ hr {
    border-color: #141204;
 }
 
+.page-content {
+   margin-top: 16px;
+}
+
 ._primary {
    border-color:#15D815!important;
    background-color:#15D815!important;

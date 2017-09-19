@@ -1,15 +1,57 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="page-content jumbo _shadow _dark">
-   <div class="row">
-      <div class="col d4">
-         <img class="-thumb" src="../static/images/paul_doyle.jpg" />
-      </div>
-      <div class="col d8">
-         <p>
-            LOTSA RAD STUFF ABOUT MY LIFE
-         </p>
+<div class="page-content">
+   <div class="jumbo _shadow _dark">
+      <h1>Paul Doyle</h1>
+      <h4><div id="byline">Software Developer</div></h4>
+   </div>
+   <div class="page-content">
+      <div class="row">
+         <div class="col d4">
+            <img class="" src="../static/images/paul_doyle.jpg" />
+         </div>
+         <div class="col d8">
+            <p>
+               I am software developer in the San Francisco bay area looking for new opportunities.
+               I'm a Cal Poly, San Luis Obispo graduate with a BS in Computer Science.
+            </p>
+            <p>
+               I'm currently working at GREE International Entertainment, Inc. in San Francisco,
+               doing Java development and maintenance for live mobile games on Android and iOS.
+               I'm interested in video game programming and design and I'm always looking for
+               opportunities to learn about areas of software development outside of my experience.
+            </p>
+            <p>
+               In school, my computer sciences studies were focused primarily on video games and
+               graphics technology. I also completed a music minor, which involved courses in music
+               theory and learning to use studio recording technology.
+            </p>
+            <p>
+               The bulk of my recent experience is in writing Java for cross-platform mobile games.
+               I also have experience writing code in C++, C, JavaScript, and ActionScript. Other
+               technologies I've worked with include OpenGL and parallel computing with CUDA.
+            </p>
+         </div>
       </div>
    </div>
 </div>
+<!-- <script>
+   var bylines=[
+      "Software Developer",
+      "Gamer",
+      "Anime & Cartoons Fan",
+      "Pun Enthusiast",
+      "Palutena main in Smash Bros. 4",
+   ];
+   var idx = 0;
+   var bylineElement = document.getElementById("byline");
+   console.log(bylineElement);
+
+   setInterval(function() {
+      if (++idx >= bylines.length) {
+         idx = 0;
+      }
+      bylineElement.innerHTML = bylines[idx];
+   }, 3000);
+</script> -->
 {% endblock %}
