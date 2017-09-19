@@ -1,0 +1,113 @@
+{% macro resume_section_header(title, description, dates) -%}
+   <h5 class="rs-title">{{ title }}</h5>
+   <div class="row rs-sub">
+      <div class="col m6">{{ description }}</div>
+      <div class="col m6">{{ dates }}</div>
+   </div>
+{%- endmacro %}
+{% macro resume_skill(skill_name, proficiency=0) -%}
+   <div class="row rs-sub">
+      <div class="col m6">{{ skill_name }}</div>
+      <div class="col m6">
+         <div class="progressbar _dark _box">
+            <div class="-bar _primary _box" style="width: {{ proficiency }}%;"></div>
+         </div>
+      </div>
+   </div>
+{%- endmacro %}
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1, user-scalabble=no">
+
+   <!-- Style sheets -->
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+   <link rel="stylesheet" href="../static/css/beauter.min.css">
+   <link rel="stylesheet" href="../static/css/custom.css">
+</head>
+<body style="position:relative;width:100%;max-width:960px;margin:0 auto;">
+   <div class="resume-bg">
+      <div class="resume-header page-content">
+         <h1 class="resume-title">Paul Doyle</h1>
+         <div class="row resume-subtitle">Software Developer</div>
+      </div>
+
+      <div class="row">
+         <div class="col d9 resume-block">
+            <h3 class="rs-header">Work Experience</h3>
+            {{ resume_section_header('GREE International, Inc.', 'Software Engineer', 'February 2015 - Present') }}
+            <ul class="rs-list">
+               <li>Built features, fixed bugs, contributed to refactors and tech debt resolution for live games</li>
+               <li>Profiled and optimized memory management and performance for Android games</li>
+               <li>Worked on full-stack cross-platform Java development using libgdx game engine</li>
+               <li>Refactored and built Gradle configuration and game server deployment scripts</li>
+            </ul>
+
+            {{ resume_section_header('Tapestry Solutions',  'Part-Time Software Engineer', 'June 2014 – February 2015') }}
+            <ul class="rs-list">
+               <li>Expanded and improved Adobe Flex GUI for planning and logistics software</li>
+               <li>Refactored existing code base while fixing bugs and implementing new features</li>
+            </ul>
+
+            {{ resume_section_header('Hewlett-Packard',  'Software Engineering Intern', 'June – September 2013') }}
+            <ul class="rs-list">
+               <li>Ported Unix testing software for printer network cards to C++ in Windows environment</li>
+               <li>Communicated with international teams to determine needs, resolve technical questions</li>
+            </ul>
+
+            {{ resume_section_header('Amazon SLO',  'Junior Software Developer', 'June 2012 – May 2013') }}
+            <ul class="rs-list">
+               <li>Fixed bugs for website maintenance and contributed to feature development</li>
+               <li>Worked with customer support and other Amazon teams to solve issues</li>
+            </ul>
+
+            <h3 class="rs-header">Technical Projects</h3>
+            {{ resume_section_header('Personal Picture Index',  'Android Application', 'December 2013 - January 2014') }}
+            <ul class="rs-list">
+               <li>Built a customizable picture dictionary application for the speech-impaired</li>
+               <li>Interfaced with Android services like text-to-speech and camera interaction</li>
+            </ul>
+
+            {{ resume_section_header('Penguin Puzzler',  'Android Application', 'October – December 2013') }}
+            <ul class="rs-list">
+               <li>Wrote a puzzle game for Android with a small multi-disciplinary team</li>
+               <li>Learned concepts and design considerations for Android OS</li>
+            </ul>
+
+            {{ resume_section_header('CUDA Ray Tracer',  'Linux Desktop App', 'March – June 2013') }}
+            <ul class="rs-list">
+               <li>Built a ray tracer in C++ using GPU parallelism using NVidia CUDA</li>
+               <li>Implemented shadows, reflections, refraction, and Monte Carlo path tracing</li>
+            </ul>
+         </div>
+         <div class="col d3 rs-sidebar">
+            <h4 class="rs-header">Personal Info</h4>
+            <p>
+               <div>San Francisco Bay Area</div>
+               <div>pauldoyle22@gmail.com</div>
+            </p>
+            <h4 class="rs-header">Education</h4>
+            <h5 class="rs-title">Cal Poly, San Luis Obispo</h5>
+            <p>Computer Science Major<br />Music Minor</p>
+
+            <h4 class="rs-header">Skills</h4>
+            <h5 class="rs-title">Languages</h5>
+            {{ resume_skill('Java', 70) }}
+            {{ resume_skill('Kotlin', 40) }}
+            {{ resume_skill('Bash', 40) }}
+            {{ resume_skill('SQL', 40) }}
+            {{ resume_skill('C/C++', 30) }}
+            {{ resume_skill('Javascript', 30) }}
+
+            <h5 class="rs-title" style="padding-top: 16px;">Tools and Tech</h5>
+            {{ resume_skill('Git SCM', 70) }}
+            {{ resume_skill('Android Dev', 60) }}
+            {{ resume_skill('AWS', 50) }}
+         </div>
+      </div>
+   </div>
+</body>
+</html>

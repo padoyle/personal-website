@@ -1,4 +1,21 @@
 {% extends "base.html" %}
+{% macro resume_section_header(title, description, dates) -%}
+   <h5 class="rs-title">{{ title }}</h5>
+   <div class="row rs-sub">
+      <div class="col m6">{{ description }}</div>
+      <div class="col m6">{{ dates }}</div>
+   </div>
+{%- endmacro %}
+{% macro resume_skill(skill_name, proficiency=0) -%}
+   <div class="row rs-sub">
+      <div class="col m6">{{ skill_name }}</div>
+      <div class="col m6">
+         <div class="progressbar _dark _box">
+            <div class="-bar _primary _box" style="width: {{ proficiency }}%;"></div>
+         </div>
+      </div>
+   </div>
+{%- endmacro %}
 {% block content %}
    <div class="resume-bg">
       <div class="resume-header page-content">
@@ -9,11 +26,7 @@
       <div class="row">
          <div class="col d9 resume-block">
             <h3 class="rs-header">Work Experience</h3>
-            <h5 class="rs-title">GREE International, Inc.</h5>
-            <div class="row rs-sub">
-               <div class="col m6">Software Engineer</div>
-               <div class="col m6">February 2015 - Present</div>
-            </div>
+            {{ resume_section_header('GREE International, Inc.', 'Software Engineer', 'February 2015 - Present') }}
             <ul class="rs-list">
                <li>Built features, fixed bugs, contributed to refactors and tech debt resolution for live games</li>
                <li>Profiled and optimized memory management and performance for Android games</li>
@@ -21,62 +34,38 @@
                <li>Refactored and built Gradle configuration and game server deployment scripts</li>
             </ul>
 
-            <h5 class="rs-title">Tapestry Solutions</h5>
-            <div class="row rs-sub">
-               <div class="col m6">Part-Time Software Engineer</div>
-               <div class="col m6">June 2014 – February 2015</div>
-            </div>
+            {{ resume_section_header('Tapestry Solutions',  'Part-Time Software Engineer', 'June 2014 – February 2015') }}
             <ul class="rs-list">
                <li>Expanded and improved Adobe Flex GUI for planning and logistics software</li>
                <li>Refactored existing code base while fixing bugs and implementing new features</li>
             </ul>
 
-            <h5 class="rs-title">Hewlett-Packard</h5>
-            <div class="row rs-sub">
-               <div class="col m6">Software Engineering Intern</div>
-               <div class="col m6">June – September 2013</div>
-            </div>
+            {{ resume_section_header('Hewlett-Packard',  'Software Engineering Intern', 'June – September 2013') }}
             <ul class="rs-list">
                <li>Ported Unix testing software for printer network cards to C++ in Windows environment</li>
                <li>Communicated with international teams to determine needs, resolve technical questions</li>
             </ul>
 
-            <h5 class="rs-title">Amazon SLO</h5>
-            <div class="row rs-sub">
-               <div class="col m6">Junior Software Developer</div>
-               <div class="col m6">June 2012 – May 2013</div>
-            </div>
+            {{ resume_section_header('Amazon SLO',  'Junior Software Developer', 'June 2012 – May 2013') }}
             <ul class="rs-list">
                <li>Fixed bugs for website maintenance and contributed to feature development</li>
                <li>Worked with customer support and other Amazon teams to solve issues</li>
             </ul>
 
             <h3 class="rs-header">Technical Projects</h3>
-            <h5 class="rs-title">Personal Picture Index</h5>
-            <div class="row rs-sub">
-               <div class="col m6">Android Application</div>
-               <div class="col m6">December 2013 - January 2014</div>
-            </div>
+            {{ resume_section_header('Personal Picture Index',  'Android Application', 'December 2013 - January 2014') }}
             <ul class="rs-list">
                <li>Built a customizable picture dictionary application for the speech-impaired</li>
                <li>Interfaced with Android services like text-to-speech and camera interaction</li>
             </ul>
 
-            <h5 class="rs-title">Penguin Puzzler</h5>
-            <div class="row rs-sub">
-               <div class="col m6">Android Application</div>
-               <div class="col m6">October – December 2013</div>
-            </div>
+            {{ resume_section_header('Penguin Puzzler',  'Android Application', 'October – December 2013') }}
             <ul class="rs-list">
                <li>Wrote a puzzle game for Android with a small multi-disciplinary team</li>
                <li>Learned concepts and design considerations for Android OS</li>
             </ul>
 
-            <h5 class="rs-title">CUDA Ray Tracer</h5>
-            <div class="row rs-sub">
-               <div class="col m6">Linux Desktop App</div>
-               <div class="col m6">March – June 2013</div>
-            </div>
+            {{ resume_section_header('CUDA Ray Tracer',  'Linux Desktop App', 'March – June 2013') }}
             <ul class="rs-list">
                <li>Built a ray tracer in C++ using GPU parallelism using NVidia CUDA</li>
                <li>Implemented shadows, reflections, refraction, and Monte Carlo path tracing</li>
@@ -89,36 +78,24 @@
                <div>pauldoyle22@gmail.com</div>
             </p>
             <h4 class="rs-header">Education</h4>
-            <h5 class="rs-title">Cal Poly, San Luis Obispo</h5>
+            <h5 class="rs-title">Cal Poly, SLO</h5>
             <p>Computer Science Major<br />Music Minor</p>
-            <h4 class="rs-header">Languages</h4>
-            <h5 class="rs-title">Professional</h5>
-            <div class="row rs-sub">
-               <div class="col m6">Java</div>
-               <div class="col m6">X X X X _</div>
-            </div>
-            <div class="row rs-sub">
-               <div class="col m6">Bash</div>
-               <div class="col m6">X X _ _ _</div>
-            </div>
-            <div class="row rs-sub">
-               <div class="col m6">Ruby</div>
-               <div class="col m6">X _ _ _ _</div>
-            </div>
-               <h5 class="rs-title">Fo fun</h5>
-            <div class="row rs-sub">
-               <div class="col m6">Kotlin</div>
-               <div class="col m6">X X _ _ _</div>
-            </div>
-            <div class="row rs-sub">
-               <div class="col m6">Python</div>
-               <div class="col m6">X _ _ _ _</div>
-            </div>
-            <div class="row rs-sub">
-               <div class="col m6">Haskell</div>
-               <div class="col m6">X _ _ _ _</div>
-            </div>
+
+            <h4 class="rs-header">Skills</h4>
+            <h5 class="rs-title">Languages</h5>
+            {{ resume_skill('Java', 70) }}
+            {{ resume_skill('Kotlin', 40) }}
+            {{ resume_skill('Bash', 40) }}
+            {{ resume_skill('SQL', 40) }}
+            {{ resume_skill('C/C++', 30) }}
+            {{ resume_skill('Javascript', 30) }}
+
+            <h5 class="rs-title" style="padding-top: 16px;">Tools and Tech</h5>
+            {{ resume_skill('Git SCM', 70) }}
+            {{ resume_skill('Android Dev', 60) }}
+            {{ resume_skill('AWS', 50) }}
          </div>
       </div>
+
    </div>
 {% endblock %}

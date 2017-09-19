@@ -40,6 +40,18 @@ hr {
    border-color: #141204;
 }
 
+._primary {
+   border-color:#15D815!important;
+   background-color:#15D815!important;
+}
+
+.rs-sidebar * .progressbar {
+   vertical-align: middle;
+   height: 10px;
+   margin-top: 8px;
+   margin-bottom: 8px;
+}
+
 /* Resume sections */
 .resume-block {
    background-color: #FAFFF4;
@@ -109,7 +121,7 @@ ul.rs-list li {
 
 /* Print friendliness */
 @media print {
-   .col.m4 {width:33%; float:left;}
+   .col.d3 {width:25%; float:left;}
    .col.m6 {width:50%; float:left;}
-   .col.m8 {width:66%; float:left;}
+   .col.d9 {width:75%; float:left;}
 }
