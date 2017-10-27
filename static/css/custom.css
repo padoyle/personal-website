@@ -128,4 +128,13 @@ ul.rs-list li {
    .col.d3 {width:25%; float:left;}
    .col.m6 {width:50%; float:left;}
    .col.d9 {width:75%; float:left;}
+
+   body { font-size: 1.2em }
+   h3 { font-size: 2.4em }
+   h5 { font-size: 2.0em }
+
+   .topnav { display: none; }
+   .footer { display: none; }
+
+   .resume-header * { color: #222; }
 }
