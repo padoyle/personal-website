@@ -14,3 +14,7 @@ def main_page():
 @app.route('/resume')
 def resume_page():
     return render_active_page('resume.html', 'resume')
+
+@app.route('/resume2')
+def resume_page2():
+    return render_active_page('resume2.html', 'resume2')

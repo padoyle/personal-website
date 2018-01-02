@@ -11,12 +11,12 @@ body {
    position: relative;
    min-height: 100%;
 
-   background-color: #E6EED6;
+   background-color: #C1D1DD;
    padding-bottom: 100px;
 }
 
 ul.topnav {
-   background-color: #141;
+   background-color: #1D1F64;
 }
 
 ul.topnav li a.active {
@@ -44,12 +44,7 @@ hr {
    margin-top: 16px;
 }
 
-._primary {
-   border-color:#15D815!important;
-   background-color:#15D815!important;
-}
-
-.rs-sidebar * .progressbar {
+.progressbar {
    vertical-align: middle;
    height: 10px;
    margin-top: 8px;
@@ -62,13 +57,8 @@ hr {
 }
 
 .resume-header {
-   background-color: #333;
    padding-top: 16px;
    padding-bottom: 16px;
-}
-
-.resume-header * {
-   color: #FAFFF4;
 }
 
 .resume-title {
