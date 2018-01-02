@@ -10,4 +10,4 @@ Flask is extremely lightweight and easy to use for small projects.  I'm also usi
 
 ## Future Additions
 ### Blog
-I'd like to at some point add a blog for making with personal/professional updates. I also like to write opinion/review pieces on video games and other media, which I may be able to put here as well.
+I'd like to at some point add a blog for posting personal/professional updates. This would be more of a web development learning project than a fully functional blog. I also like to write opinion/review pieces on video games and other media, which currently live elsewhere but could be incorporated into my own blog.
